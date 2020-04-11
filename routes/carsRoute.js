@@ -7,4 +7,7 @@ carsRouter.route('')
   .get(carsController.get)
   .post(carsController.add);
 
+carsRouter.route('/:id')
+  .get(carsController.getById);
+
 module.exports = carsRouter; 

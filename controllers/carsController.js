@@ -13,6 +13,21 @@ module.exports = {
       }
     });
   },
+
+  getById: (req, res) => {
+    Car.findById(req.params.id, (err, car) => {
+      if (err) {
+        res.status(404);
+        res.send("Car not fould...");
+      }
+      else {
+        res.status(200);
+        console.log('');
+        res.send(car);
+      }
+    });
+  },
+
   add: (req, res) => {
     let car = new Car(req.body);
     car.save((err) => {
@@ -22,9 +37,9 @@ module.exports = {
       }
       else {
         res.status(201);
+        console.log(req.body);
         res.send(req.body);
       }
      });
     },
-
 };

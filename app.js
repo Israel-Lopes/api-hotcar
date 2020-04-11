@@ -13,7 +13,7 @@ const url = password;
 
 db.on('error', console.error);
 db.once('open', () => {
-  console.log('Connected to the productsdb MongoDB database.');
+  console.log('Connected to the carsdb MongoDB database.');
 });
 
 mongoose.connect(url, {
