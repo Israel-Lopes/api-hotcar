@@ -9,7 +9,6 @@ const carAttributesSchema = new Schema({
   year: String
 });
 
-
 const audiSchema = new Schema({
   audi: [carAttributesSchema]
 });
